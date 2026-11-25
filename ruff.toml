@@ -1,3 +1,12 @@
 
-# Common tool copies are validated and formatted only in their canonical repositories.
-extend-exclude = ["scripts/materialize_shared.py", "scripts/release_common.py", "tests/plugin_api_checker.py"]
+# Common tool copies and the modules materialized from _periodic_shared are
+# validated and formatted only in their canonical repositories.
+line-length = 100
+extend-exclude = [
+    "scripts/materialize_shared.py",
+    "scripts/release_common.py",
+    "tests/plugin_api_checker.py",
+    "_periodic_shared",
+    "lammps_input_generator/cell_model.py",
+    "lammps_input_generator/elements.py",
+]

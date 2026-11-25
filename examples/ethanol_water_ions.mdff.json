@@ -1,0 +1,476 @@
+{
+ "format": "moleditpy-mdff",
+ "version": 1,
+ "source": "hand-written example: GAFF-like ethanol, TIP3P water, Joung-Cheatham ions (not for production)",
+ "combination_rule": 2,
+ "fudge_lj": 0.5,
+ "fudge_qq": 0.8333,
+ "molecule_types": [
+  {
+   "name": "ETOH",
+   "atoms": [
+    {
+     "name": "C1",
+     "element": "C",
+     "type": "c3",
+     "charge": -0.18,
+     "mass": 12.011,
+     "sigma": 0.339967,
+     "epsilon": 0.45773
+    },
+    {
+     "name": "C2",
+     "element": "C",
+     "type": "c3",
+     "charge": 0.265,
+     "mass": 12.011,
+     "sigma": 0.339967,
+     "epsilon": 0.45773
+    },
+    {
+     "name": "O",
+     "element": "O",
+     "type": "oh",
+     "charge": -0.683,
+     "mass": 15.999,
+     "sigma": 0.306647,
+     "epsilon": 0.880314
+    },
+    {
+     "name": "HO",
+     "element": "H",
+     "type": "ho",
+     "charge": 0.418,
+     "mass": 1.008,
+     "sigma": 0.0,
+     "epsilon": 0.0
+    },
+    {
+     "name": "H11",
+     "element": "H",
+     "type": "hc",
+     "charge": 0.06,
+     "mass": 1.008,
+     "sigma": 0.264953,
+     "epsilon": 0.0656888
+    },
+    {
+     "name": "H12",
+     "element": "H",
+     "type": "hc",
+     "charge": 0.06,
+     "mass": 1.008,
+     "sigma": 0.264953,
+     "epsilon": 0.0656888
+    },
+    {
+     "name": "H13",
+     "element": "H",
+     "type": "hc",
+     "charge": 0.06,
+     "mass": 1.008,
+     "sigma": 0.264953,
+     "epsilon": 0.0656888
+    },
+    {
+     "name": "H21",
+     "element": "H",
+     "type": "h1",
+     "charge": 0.0,
+     "mass": 1.008,
+     "sigma": 0.247135,
+     "epsilon": 0.0656888
+    },
+    {
+     "name": "H22",
+     "element": "H",
+     "type": "h1",
+     "charge": 0.0,
+     "mass": 1.008,
+     "sigma": 0.247135,
+     "epsilon": 0.0656888
+    }
+   ],
+   "bonds": [
+    {
+     "i": 0,
+     "j": 1,
+     "r0": 0.1535,
+     "k": 253634.0
+    },
+    {
+     "i": 1,
+     "j": 2,
+     "r0": 0.1426,
+     "k": 262839.0
+    },
+    {
+     "i": 2,
+     "j": 3,
+     "r0": 0.0974,
+     "k": 309281.0
+    },
+    {
+     "i": 0,
+     "j": 4,
+     "r0": 0.1092,
+     "k": 282001.0
+    },
+    {
+     "i": 0,
+     "j": 5,
+     "r0": 0.1092,
+     "k": 282001.0
+    },
+    {
+     "i": 0,
+     "j": 6,
+     "r0": 0.1092,
+     "k": 282001.0
+    },
+    {
+     "i": 1,
+     "j": 7,
+     "r0": 0.1093,
+     "k": 281080.0
+    },
+    {
+     "i": 1,
+     "j": 8,
+     "r0": 0.1093,
+     "k": 281080.0
+    }
+   ],
+   "angles": [
+    {
+     "i": 4,
+     "j": 0,
+     "k_atom": 5,
+     "theta0": 107.58,
+     "k": 327.0
+    },
+    {
+     "i": 4,
+     "j": 0,
+     "k_atom": 6,
+     "theta0": 107.58,
+     "k": 327.0
+    },
+    {
+     "i": 5,
+     "j": 0,
+     "k_atom": 6,
+     "theta0": 107.58,
+     "k": 327.0
+    },
+    {
+     "i": 1,
+     "j": 0,
+     "k_atom": 4,
+     "theta0": 110.05,
+     "k": 388.3
+    },
+    {
+     "i": 1,
+     "j": 0,
+     "k_atom": 5,
+     "theta0": 110.05,
+     "k": 388.3
+    },
+    {
+     "i": 1,
+     "j": 0,
+     "k_atom": 6,
+     "theta0": 110.05,
+     "k": 388.3
+    },
+    {
+     "i": 0,
+     "j": 1,
+     "k_atom": 7,
+     "theta0": 110.07,
+     "k": 388.0
+    },
+    {
+     "i": 0,
+     "j": 1,
+     "k_atom": 8,
+     "theta0": 110.07,
+     "k": 388.0
+    },
+    {
+     "i": 7,
+     "j": 1,
+     "k_atom": 8,
+     "theta0": 108.46,
+     "k": 329.3
+    },
+    {
+     "i": 0,
+     "j": 1,
+     "k_atom": 2,
+     "theta0": 110.19,
+     "k": 566.9
+    },
+    {
+     "i": 7,
+     "j": 1,
+     "k_atom": 2,
+     "theta0": 109.88,
+     "k": 426.8
+    },
+    {
+     "i": 8,
+     "j": 1,
+     "k_atom": 2,
+     "theta0": 109.88,
+     "k": 426.8
+    },
+    {
+     "i": 1,
+     "j": 2,
+     "k_atom": 3,
+     "theta0": 108.16,
+     "k": 395.9
+    }
+   ],
+   "torsions": [
+    {
+     "i": 4,
+     "j": 0,
+     "k_atom": 1,
+     "l": 2,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 4,
+     "j": 0,
+     "k_atom": 1,
+     "l": 7,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 4,
+     "j": 0,
+     "k_atom": 1,
+     "l": 8,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 5,
+     "j": 0,
+     "k_atom": 1,
+     "l": 2,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 5,
+     "j": 0,
+     "k_atom": 1,
+     "l": 7,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 5,
+     "j": 0,
+     "k_atom": 1,
+     "l": 8,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 6,
+     "j": 0,
+     "k_atom": 1,
+     "l": 2,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 6,
+     "j": 0,
+     "k_atom": 1,
+     "l": 7,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 6,
+     "j": 0,
+     "k_atom": 1,
+     "l": 8,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6508,
+     "improper": false
+    },
+    {
+     "i": 0,
+     "j": 1,
+     "k_atom": 2,
+     "l": 3,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6974,
+     "improper": false
+    },
+    {
+     "i": 7,
+     "j": 1,
+     "k_atom": 2,
+     "l": 3,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6974,
+     "improper": false
+    },
+    {
+     "i": 8,
+     "j": 1,
+     "k_atom": 2,
+     "l": 3,
+     "periodicity": 3,
+     "phase": 0.0,
+     "k": 0.6974,
+     "improper": false
+    }
+   ],
+   "exclusions_nrexcl": 3
+  },
+  {
+   "name": "SOL",
+   "atoms": [
+    {
+     "name": "OW",
+     "element": "O",
+     "type": "OW",
+     "charge": -0.834,
+     "mass": 15.9994,
+     "sigma": 0.315061,
+     "epsilon": 0.636386
+    },
+    {
+     "name": "HW1",
+     "element": "H",
+     "type": "HW",
+     "charge": 0.417,
+     "mass": 1.008,
+     "sigma": 0.0,
+     "epsilon": 0.0
+    },
+    {
+     "name": "HW2",
+     "element": "H",
+     "type": "HW",
+     "charge": 0.417,
+     "mass": 1.008,
+     "sigma": 0.0,
+     "epsilon": 0.0
+    }
+   ],
+   "bonds": [
+    {
+     "i": 0,
+     "j": 1,
+     "r0": 0.09572,
+     "k": 502416.0
+    },
+    {
+     "i": 0,
+     "j": 2,
+     "r0": 0.09572,
+     "k": 502416.0
+    }
+   ],
+   "angles": [
+    {
+     "i": 1,
+     "j": 0,
+     "k_atom": 2,
+     "theta0": 104.52,
+     "k": 628.02
+    }
+   ],
+   "torsions": [],
+   "exclusions_nrexcl": 2,
+   "settles": {
+    "i": 0,
+    "doh": 0.09572,
+    "dhh": 0.15139
+   }
+  },
+  {
+   "name": "NA",
+   "atoms": [
+    {
+     "name": "NA",
+     "element": "Na",
+     "type": "Na+",
+     "charge": 1.0,
+     "mass": 22.98977,
+     "sigma": 0.2439281,
+     "epsilon": 0.365846
+    }
+   ],
+   "exclusions_nrexcl": 1
+  },
+  {
+   "name": "CL",
+   "atoms": [
+    {
+     "name": "CL",
+     "element": "Cl",
+     "type": "Cl-",
+     "charge": -1.0,
+     "mass": 35.453,
+     "sigma": 0.4477657,
+     "epsilon": 0.148908
+    }
+   ],
+   "exclusions_nrexcl": 1
+  }
+ ],
+ "system": [
+  {
+   "type": "ETOH",
+   "count": 1,
+   "atom_offset": 0
+  },
+  {
+   "type": "SOL",
+   "count": 3,
+   "atom_offset": 9
+  },
+  {
+   "type": "NA",
+   "count": 1,
+   "atom_offset": 18
+  },
+  {
+   "type": "CL",
+   "count": 1,
+   "atom_offset": 19
+  }
+ ]
+}
