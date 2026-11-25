@@ -1,0 +1,19 @@
+{
+  "source": "lammps_input_generator/__init__.py",
+  "title": "LAMMPS Input Generator",
+  "package": "lammps_input_generator",
+  "archive": "lammps_input_generator_{version}.zip",
+  "assets": [
+    "lammps_input_generator_{version}.zip"
+  ],
+  "include": [
+    "README.md",
+    "LICENSE",
+    "COPYING",
+    "LICENSING.md"
+  ],
+  "exclude": [
+    "*/__pycache__/*",
+    "*/.git/*"
+  ]
+}

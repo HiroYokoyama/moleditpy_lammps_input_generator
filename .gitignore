@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+lammps_input_generator/settings.json
+
+# Materialized from the _periodic_shared submodule by scripts/materialize_shared.py
+# -- never commit these, they are generated at build/test time.
+lammps_input_generator/cell_model.py
+lammps_input_generator/elements.py

@@ -1,0 +1,7 @@
+{
+  "package": "lammps_input_generator",
+  "files": [
+    "cell_model.py",
+    "elements.py"
+  ]
+}
