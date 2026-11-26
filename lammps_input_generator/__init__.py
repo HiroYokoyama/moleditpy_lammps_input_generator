@@ -12,7 +12,7 @@ import os
 logger = logging.getLogger(__name__)
 
 PLUGIN_NAME = "LAMMPS Input Generator"
-PLUGIN_VERSION = "0.1.1"
+PLUGIN_VERSION = "0.1.2"
 PLUGIN_AUTHOR = "HiroYokoyama"
 PLUGIN_DESCRIPTION = (
     "Write a LAMMPS data file and input script (minimize, NVE, NVT, NPT) for the "
@@ -21,7 +21,7 @@ PLUGIN_DESCRIPTION = (
 )
 
 PLUGIN_CATEGORY = "Input Generator"
-PLUGIN_TAGS = ["Generator"]
+PLUGIN_TAGS = ["Generator", "MD"]
 PLUGIN_DEPENDENCIES = []
 PLUGIN_OPTIONAL_DEPENDENCIES = []
 PLUGIN_SUPPORTED_MOLEDITPY_VERSION = ">=5.0.0, <6.0.0"
