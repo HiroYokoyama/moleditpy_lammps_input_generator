@@ -15,6 +15,7 @@ from PySide6.QtWidgets import (
     QDoubleSpinBox,
     QFileDialog,
     QFormLayout,
+    QFrame,
     QGroupBox,
     QHBoxLayout,
     QInputDialog,
@@ -23,6 +24,7 @@ from PySide6.QtWidgets import (
     QMessageBox,
     QPlainTextEdit,
     QPushButton,
+    QScrollArea,
     QSpinBox,
     QSplitter,
     QTabWidget,
@@ -33,6 +35,7 @@ from PySide6.QtWidgets import (
 from . import PLUGIN_NAME, PLUGIN_VERSION, SETTINGS_FILE, lmp_runner, writer
 from . import cell as cellmod
 from . import generate as gen
+from .wheel_guard import install_wheel_guard
 
 logger = logging.getLogger(__name__)
 
@@ -105,6 +108,31 @@ def _ispin(low, high, step=1):
     return spin
 
 
+def _scrolled(page):
+    """A settings page that scrolls, so a long tab never makes the dialog taller than the
+    screen and pushes its buttons out of reach."""
+    area = QScrollArea()
+    area.setWidgetResizable(True)
+    area.setFrameShape(QFrame.Shape.NoFrame)
+    area.setWidget(page)
+    # Scrolling over a field must not change it: fields take the wheel once clicked.
+    install_wheel_guard(page)
+    return area
+
+
+def fit_to_screen(dialog, fraction=0.9):
+    """Shrink the dialog's first size to the screen it opens on (small laptop screens)."""
+    parent = dialog.parentWidget()
+    screen = parent.screen() if parent is not None else dialog.screen()
+    if screen is None:
+        return
+    area = screen.availableGeometry()
+    dialog.resize(
+        min(dialog.width(), int(area.width() * fraction)),
+        min(dialog.height(), int(area.height() * fraction)),
+    )
+
+
 class LammpsInputDialog(QDialog):
     def __init__(
         self,
@@ -134,6 +162,7 @@ class LammpsInputDialog(QDialog):
 
         self.setWindowTitle(f"{PLUGIN_NAME} v{PLUGIN_VERSION}")
         self.resize(1200, 780)
+        fit_to_screen(self)
         self._build_ui()
 
         self._timer = QTimer(self)
@@ -187,10 +216,10 @@ class LammpsInputDialog(QDialog):
         layout.addWidget(splitter, 1)
 
         self.settings_tabs = QTabWidget()
-        self.settings_tabs.addTab(self._build_ff_tab(), "Force field")
-        self.settings_tabs.addTab(self._build_box_tab(), "Box")
-        self.settings_tabs.addTab(self._build_run_tab(), "Run")
-        self.settings_tabs.addTab(self._build_output_tab(), "Output")
+        self.settings_tabs.addTab(_scrolled(self._build_ff_tab()), "Force field")
+        self.settings_tabs.addTab(_scrolled(self._build_box_tab()), "Box")
+        self.settings_tabs.addTab(_scrolled(self._build_run_tab()), "Run")
+        self.settings_tabs.addTab(_scrolled(self._build_output_tab()), "Output")
         splitter.addWidget(self.settings_tabs)
 
         right = QWidget()
